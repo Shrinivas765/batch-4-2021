@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- <i class="fa fa-id-card" aria-hidden="true"></i> -->
+    <h1 id="id1"></h1>
+    <script>
+  
+        // initializing function to demonstrate match()
+        // method with "g" para
+        function matchString() {
+            var string = "Welcome to geeks dhanashree jhgjhsgdf dhanas dhanashree for geeks";
+            var result = string.match(/dhanashree/g);
+            document.write("Output : " + result);
+            document.getElementById("id1").innerHTML=string.match(/dh/g)
+        } matchString();
+          
+    </script>  
+</body>
+
+</html>

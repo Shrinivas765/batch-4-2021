@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="english" placeholder=" Enter here marks for english">
+<input type="text" id="computer" placeholder="enter marks for computer">
+<input type="text" id="data" placeholder="enter marks for data_structure">
+
+<h1 id="id1"></h1>
+<h1 id="id2"></h1>
+<h1 id="id3"></h1>
+<hr>
+<h1 id="total"></h1>
+<h1 id="per"></h1>
+
+<button onclick="showresult()">Show result</button>
+    <script>
+function showresult(){
+     var english = document.getElementById("english").value;
+     console.log(typeof(english))
+        var computer = document.getElementById("computer").value;
+        var data_structure = document.getElementById("data").value;;
+ total =Number(english) +Number(computer) +Number(data_structure)
+//  console.log(total)
+per = (total /3)
+// console.log(per)
+document.getElementById("id1").innerHTML="Marks of English: " +english;
+document.getElementById("id2").innerHTML="Marks of computer: "+computer;
+document.getElementById("id3").innerHTML = "Marks of data_structure: "+data_structure;
+document.getElementById("total").innerHTML = "The total marks is:" +total
+document.getElementById("per").innerHTML= "The percentage is : "+per +"%"
+}
+
+
+       
+    </script>
+</body>
+</html>
