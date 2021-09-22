@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="id1">well come in js</h1>
+    <script>
+
+
+var a = document.getElementById("id1").addEventListener("click", function(){
+    document.getElementById("id1").innerHTML = "hiii i am changed"
+})
+var a = document.getElementById("id1").addEventListener("mouseover", function(){
+    document.getElementById("id1").style.color = "red"
+})
+var a = document.getElementById("id1").addEventListener("mouseout", function(){
+    document.getElementById("id1").style.backgroundColor = "green"
+})
+
+
+
+        // const person = {
+        //     name:"abc",
+        //     age:25,
+        //     carname:"BMW",
+        //     fcolor:["black", "red","Blue"]
+            
+        // }
+        // document.getElementById("id1").innerHTML=person.name
+        // var c = JSON.stringify(person)
+        // var json1 = JSON.parse(c)
+        // console.log(json1)
+        // document.getElementById("id1").innerHTML= c.name
+        // console.log(person.name)
+        // console.log(JSON.stringify(person))
+    </script>
+</body>
+</html>

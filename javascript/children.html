@@ -7,20 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="div1">
-        <p>hiiii child</p>
-        <h1>welcome in html</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, repudiandae! Assumenda sit nostrum doloremque numquam, excepturi maiores sed dolorem nihil odio magnam facilis laborum asperiores nam cumque voluptatibus consectetur eius.
-        </p>
-        <ul id="ul1">
-            <li>apple</li>
-            <li>Banana</li>
-            <li>Kiwi</li>
-        </ul>
-
+   
         <div id ="second">
-            <h1>hiiii hello</h1>
+            
             <ul>
                 <li>a</li>
                 <li>b</li>
@@ -28,11 +17,17 @@
                 <li>d </li>
             </ul>
         </div>
-        <div>
-            <h1>welcomr in react js</h1>
-        </div>
-    </div>
+        
+   
     <script>
+
+
+var div = document.getElementById("second")
+console.log(div.firstElementChild)
+var c = document.getElementsByTagName("li")
+console.log(c[1].style.color="red")
+
+
     //     var a = document.getElementById("div1")
     //     console.log (a)
     //    var b = a.firstElementChild
@@ -45,17 +40,17 @@
         // console.log(ul.children)
 
 
-        var a = document.getElementById("second")
-        console.log(a)
-        var firstVAR = a.firstElementChild;
-        var l = a.lastChild
-        var le  = a.lastElementChild
-        var x =le.lastElementChild;
-        x.setAttribute("id", "democlass");
-        console.log(x)
-        console.log(document.getElementById("democlass"))
-        var z = document.getElementById("democlass").style.color ="red" 
-        console.log(z)
+        // var a = document.getElementById("second")
+        // console.log(a)
+        // var firstVAR = a.firstElementChild;
+        // var l = a.lastChild
+        // var le  = a.lastElementChild
+        // var x =le.lastElementChild;
+        // x.setAttribute("id", "democlass");
+        // console.log(x)
+        // console.log(document.getElementById("democlass"))
+        // var z = document.getElementById("democlass").style.color ="red" 
+        // console.log(z)
         // console.log(l)
         // console.log(le)
         // console.log(firstVAR)
