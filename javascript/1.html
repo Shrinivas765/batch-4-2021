@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <button onclick="searchhandle()">Search</button>
-    <textarea name="data" id="data" style="position: relative; left: 50%;;" >
+    <textarea name="data" id="data" style="position: relative; left: 50%;;">
 DEWRTRBHCD
 HXGZUWRYER
 AOCKSBAUCU
@@ -21,35 +18,25 @@ HZGHQGWTUV
 RQMNDXZBST
 ETCLATNBCE
 EBURPZUXMS
-
-ts
+su
 </textarea>
-<button style="position: relative; left: 50%;"> reset</button>
-
+    <button style="position: relative; left: 50%;"> reset</button>
     <script>
-function searchhandle (){
-console.log("djhgkd")
-var inputword = document.getElementById("textid").value;
-console.log(inputword)
-document.getElementById("data").innerHTML="jbjh"}
-
-
-
         var mark = [];
         var grid;
-
-function in_path(path, row, col){
-    for (var i=0; i<path.length; i++){
-        if(path[i].row == row &&
-        path[i].col == col
-        ){
-            return true;
+        function in_path(path, row, col) {
+            for (var i = 0; i < path.length; i++) {
+                if (path[i].row == row &&
+                    path[i].col == col
+                ) {
+                    return true;
+                }
+            }
+            return false;
         }
-    }
-    return false;
-}
         function search(row, col, word, path) {
-            // mark[0][0] = true;
+           
+
             if (word == "") {
                 path.forEach(function (rc) {
                     mark[rc.row][rc.col] = true
@@ -65,7 +52,6 @@ function in_path(path, row, col){
                     }
                 }
             }
-
         }
         window.onload = function () {
             var data = document.getElementById("data").value.split("\n\n");
@@ -74,11 +60,11 @@ function in_path(path, row, col){
                 return e.toUpperCase().trim();
 
             });
-            // var mark = [];
+           
+
             for (var i = 0; i < grid.length; i++) {
                 mark[i] = [];
             }
-
             words.forEach(function (word) {
                 for (var row = 0; row < grid.length; row++) {
                     for (var col = 0; col < grid[row].length; col++) {
@@ -86,27 +72,32 @@ function in_path(path, row, col){
                     }
                 }
             });
-            document.write(`<input type="text" id="textid"></input>`)
-            document.write(`<button type="text" id="btnid" onclick="searchhandle()">Search</button>`)
+            document.write(`<input type="text" id="textid"></input>`);
+            document.write(`<button onclick="searchhandle()">Serch</button>`);
+            document.write(`<button onclick="resethandle()">RESET</button>`);
             document.write(`<table border='1' id="table1">`);
             for (var row = 0; row < grid.length; row++) {
                 document.write("<tr>")
                 for (var col = 0; col < grid[row].length; col++) {
-                    var color = mark[row][col] ? "yellow" : "white"
+                    var color = mark[row][col] ? "white" : "white"
                     document.write("<td align='center' bgcolor='" + color + "'>" + grid[row][col] + "</td>");
-                    // search(row, col, word, []);
+                   
+
                 }
                 document.write("</tr>")
             }
             document.write("</table>")
-            document.write(words)
-            document.write(`<button onclick="resethandle()">RESET</button>`);
-            //    console.log(words)
-            //    console.log(data)
+            
+
         }
-        function resethandle(){
-            var table= document.getElementById("table1")
-            console.log(table)
+        function resethandle() {
+            var s = document.getElementById("textid").value = ""
+           
+
+            var table = document.getElementById("table1")
+            // console.log(table)
+
+            document.getElementById("textid").innerHTML = ""
             table.remove();
             document.write("<table border='1'>");
             for (var row = 0; row < grid.length; row++) {
@@ -114,16 +105,64 @@ function in_path(path, row, col){
                 for (var col = 0; col < grid[row].length; col++) {
                     var color = mark[row][col] ? "white" : "white"
                     document.write("<td align='center' bgcolor='" + color + "'>" + grid[row][col] + "</td>");
-                    // search(row, col, word, []);
+                    
+
                 }
                 document.write("</tr>")
             }
             document.write("</table>")
         }
+        var data = document.getElementById("data").value.split("\n\n");
+
+        function searchhandle() {
+            var a = document.getElementById("textid").value;
+           
+
+            document.getElementById("table1").remove()
+
+           
+            // console.log(data)
+
+
+            let remove = data.pop();
+            // console.log(data)
+
+            data.push(a)
+            grid = data[0].split("\n");
+            var words = data[1].split(",").map(function (e) {
+                return e.toUpperCase().trim();
+
+            });
+            
+
+            for (var i = 0; i < grid.length; i++) {
+                mark[i] = [];
+            }
+            words.forEach(function (word) {
+                for (var row = 0; row < grid.length; row++) {
+                    for (var col = 0; col < grid[row].length; col++) {
+                        search(row, col, word, []);
+                    }
+                }
+            });
+            
+
+            document.write(`<table border='1' id="table1">`);
+            for (var row = 0; row < grid.length; row++) {
+                document.write("<tr>")
+                for (var col = 0; col < grid[row].length; col++) {
+                    var color = mark[row][col] ? "yellow" : "white"
+                    document.write("<td align='center' bgcolor='" + color + "'>" + grid[row][col] + "</td>");
+                   
+
+                }
+                document.write("</tr>")
+            }
+            document.write("</table>")
+           
+
+        }
 
     </script>
-
-
 </body>
-
 </html>

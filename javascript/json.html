@@ -12,27 +12,32 @@
     <script>
 
 
-var a = document.getElementById("id1").addEventListener("click", function(){
-    document.getElementById("id1").innerHTML = "hiii i am changed"
-})
-var a = document.getElementById("id1").addEventListener("mouseover", function(){
-    document.getElementById("id1").style.color = "red"
-})
-var a = document.getElementById("id1").addEventListener("mouseout", function(){
-    document.getElementById("id1").style.backgroundColor = "green"
-})
+// var a = document.getElementById("id1").addEventListener("click", function(){
+//     document.getElementById("id1").innerHTML = "hiii i am changed"
+// })
+// var a = document.getElementById("id1").addEventListener("mouseover", function(){
+//     document.getElementById("id1").style.color = "red"
+// })
+// var a = document.getElementById("id1").addEventListener("mouseout", function(){
+//     document.getElementById("id1").style.backgroundColor = "green"
+// })
 
 
 
-        // const person = {
-        //     name:"abc",
-        //     age:25,
-        //     carname:"BMW",
-        //     fcolor:["black", "red","Blue"]
+        const person = {
+            name:"abc",
+            age:25,
+            carname:"BMW",
+            fcolor:["black", "red","Blue"]
             
-        // }
-        // document.getElementById("id1").innerHTML=person.name
-        // var c = JSON.stringify(person)
+        }
+        document.getElementById("id1").innerHTML=person.name
+        var c = JSON.stringify(person)
+        console.log(c)
+
+var w = JSON.parse(c)
+console.log(w)
+
         // var json1 = JSON.parse(c)
         // console.log(json1)
         // document.getElementById("id1").innerHTML= c.name
