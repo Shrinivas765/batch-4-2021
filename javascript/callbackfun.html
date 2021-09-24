@@ -9,20 +9,28 @@
 </head>
 
 <body>
+    <h1 id="id1"></h1>
     <script>
+        // display();
+        // console.log("start script")
+        // function display() {
+        //     setTimeout(function () {
+        //         // console.log("hshdgf\sj")
+        //         // console.log("this is setInterval")
+        //         var date = new Date();
+        //         document.getElementById("id1").innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds()
+        //         // console.log(date)
+        //     }, 10000)
+        // }
 
-        function display() {
-            console.log("dispaly  abc")
-        }
+        // console.log("end")
 
-        function Add(m1, m2, abc) {
-            console.log("start Add")
-            z = m1 + m2
-            console.log( "Addition of m1,m2   " + z)
-            abc()
-            console.log("end Add")
+        for(i=0;i<6;i++)
+        {
+            setInterval(function(){
+                console.log(i)
+            },i*1000)
         }
-        Add(25, 25, display)
 
     </script>
 </body>
